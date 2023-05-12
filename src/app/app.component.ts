@@ -33,6 +33,8 @@ export class AppComponent {
 
   submitted: boolean;
 
+  person : Person;
+
   constructor(
     private productService: ProductService,
     private messageService: MessageService,
@@ -49,7 +51,7 @@ export class AppComponent {
   }
 
   openNew() {
-    this.product = {};
+    this.person = {};
     this.submitted = false;
     this.productDialog = true;
   }
@@ -74,8 +76,8 @@ export class AppComponent {
     });
   }
 
-  editProduct(product: Product) {
-    this.product = { ...product };
+  editProduct(person: Person) {
+    this.person = { ...person };
     this.productDialog = true;
   }
 
